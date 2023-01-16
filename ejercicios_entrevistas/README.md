@@ -29,8 +29,10 @@ Definir una función generar_n_caracteres() que tome un entero n y devuelva el c
 ## ejercicio_9
 Definir un histograma procedimiento() que tome una lista de números enteros e imprima un histograma en la pantalla. Ejemplo: procedimiento([4, 9, 7]) debería imprimir lo siguiente:
 
+\begin{fleshleft}
 $$ **** $$
 
 $$ ********* $$
 
 $$ ******* $$
+\end{fleshleft}
