@@ -110,7 +110,7 @@ if __name__ == "__main__":
     
     # Creo una lista de 10 Empleados
     empleados = [
-        EmpleadoFijo('12345678', 'Juan',     'Perez', 2021, 30000),
+        EmpleadoFijo('12345678', 'Guillermo', 'lalo', 2021, 30000),
         EmpleadoFijo('14344678', 'Julian',   'Pixel', 2020, 30000),
         EmpleadoFijo('22345678', 'Agustina', 'Nuñez', 2022, 30000),
         EmpleadoFijo('13345678', 'Ignacio',  'Gutierrez', 2020, 30000),
