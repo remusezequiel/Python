@@ -98,19 +98,22 @@ class EmpleadoComision(Empleado):
         else:
             return salario
 
-def mostrar_salarios(empleados):
+# Metodos aparte
+def mostrar_salario_show_all(empleados):
     """ Muestra el salario de un empleado sin distinguir de que clase biene"""
     for empleado in empleados:
         print(f'{empleado.nombre} {empleado.apellido}: {empleado.mostrar_salario()}')
 
-
+def empleado_con_mas_clientes(empleados):
+    max_clientes = max(empleados, key=lambda empleado: empleado.clientes_captados if isinstance(empleado, EmpleadoComision) else 0)
+    return max_clientes
 
 
 if __name__ == "__main__":
     
     # Creo una lista de 10 Empleados
     empleados = [
-        EmpleadoFijo('12345678', 'Guillermo', 'lalo', 2021, 30000),
+        EmpleadoFijo('12345678', 'Guillermo','Lopez', 2021, 30000),
         EmpleadoFijo('14344678', 'Julian',   'Pixel', 2020, 30000),
         EmpleadoFijo('22345678', 'Agustina', 'Nuñez', 2022, 30000),
         EmpleadoFijo('13345678', 'Ignacio',  'Gutierrez', 2020, 30000),
@@ -122,7 +125,7 @@ if __name__ == "__main__":
         EmpleadoComision('23432789', 'Ana3', 'Gomez', 2018, 20000, 3, 1500),
     ]
     
-    mostrar_salarios(empleados)
+    mostrar_salario_show_all(empleados)
     
     # print(f'Empleado con más clientes: {empleado_con_mas_clientes(empleados).nombre}')
 
